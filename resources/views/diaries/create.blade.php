@@ -7,6 +7,16 @@
     <title>新規投稿画面</title>
 </head>
 <body>
+    @extends('layouts.app')
+
+    @section('title')
+    新規投稿画面
+    @endsection
+
+    @section('content')
+    <a href="{{ route('diary.index') }}" class="btn btn-primary btn-block">
+    投稿一覧へ戻る
+　　</a>
     <section class="container m-5">
         <div class="row justify-content-center">
             <div class="col-8">
@@ -38,5 +48,6 @@
             </div>
         </div>
     </section>
+    @endsection
 </body>
 </html>
