@@ -68,6 +68,9 @@
                                     </form>
                                 </div>
                             </li>
+                        <li class="nav-item">
+                          <img height="40px" src="{{ Auth::user()->picture_path }}" >
+                        </li>
                         @endguest
                     </ul>
                 </div>

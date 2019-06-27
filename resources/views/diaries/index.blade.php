@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="/css/app.css">
     <title>一覧表示画面</title>
 </head>
@@ -24,6 +25,7 @@
 
     @foreach ($diaries as $diary)
         <div style="width: 200px; display: inline-block;" class="m-4 p-4 border border-primary">
+            <p>編集者：{{ $diary->user->name }}</p>
             <p>{{ $diary->title }}</p>
             <p>{{ $diary->body }}</p>
             <p>{{ $diary->created_at }}</p>
